@@ -1,28 +1,26 @@
-import static com.raylib.Jaylib.RAYWHITE;
-import static com.raylib.Jaylib.VIOLET;
 import static com.raylib.Raylib.*;
-
+import static com.raylib.Jaylib.*;
 public class Main {
-    public static void main(String args[]) {
-        InitWindow(800, 450, "Demo");
-        SetTargetFPS(60);
-        Camera3D camera = new Camera3D()
-                ._position(new Vector3().x(18).y(16).z(18))
-                .target(new Vector3())
-                .up(new Vector3().x(0).y(1).z(0))
-                .fovy(45).projection(CAMERA_PERSPECTIVE);
+    public static void main(String[] args) {
+        final int SCREENWIDTH = 1920;
+        final int SCREENHEIGHT = 1080;
+//        create new window
+        InitWindow(SCREENWIDTH, SCREENHEIGHT, "testing game mechanics");
+//      target fps
 
-        while (!WindowShouldClose()) {
-            UpdateCamera(camera, CAMERA_ORBITAL);
+        SetTargetFPS(60);
+
+        Player player1 = new Player();
+//        this checks if they cloes the window or press escape
+//        if not, run the loop and update stuff
+        while (!WindowShouldClose()){
             BeginDrawing();
             ClearBackground(RAYWHITE);
-            BeginMode3D(camera);
-            DrawGrid(20, 1.0f);
-            EndMode3D();
-            DrawText("Hello world", 190, 200, 20, VIOLET);
-            DrawFPS(20, 20);
+            player1.update();
+            DrawFPS(100,100);
             EndDrawing();
         }
+//        close the window
         CloseWindow();
     }
 }
