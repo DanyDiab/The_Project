@@ -10,7 +10,7 @@ public class Player extends Creature{
         super(100,10, 10, 100, 100, 5, 20);
         DrawCircle(posX, posY, size, RED);
     }
-
+//
 //move function that updates player posistions and redraws the position.
     public void move() {
         if (IsKeyDown(KEY_W) && posY > 3 + size) {
