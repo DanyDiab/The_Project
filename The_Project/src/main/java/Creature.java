@@ -17,6 +17,13 @@ public class Creature {
         this.size = size;
     }
 
+    public Creature (int hp, int posX, int posY,int size){
+        this.hp = hp;
+        this.posX = posX;
+        this.posY = posY;
+        this.size = size;
+    }
+
     public int getHp() {
         return hp;
     }

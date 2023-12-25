@@ -11,12 +11,14 @@ public class Main {
         SetTargetFPS(60);
 
         Player player1 = new Player();
+        Enemy enemy1 = new Enemy(200,200,500,30);
 //        this checks if they cloes the window or press escape
 //        if not, run the loop and update stuff
         while (!WindowShouldClose()){
             BeginDrawing();
             ClearBackground(RAYWHITE);
             player1.update();
+            enemy1.update();
             DrawFPS(100,100);
             EndDrawing();
         }

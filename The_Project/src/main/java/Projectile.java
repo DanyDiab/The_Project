@@ -8,6 +8,7 @@ public class Projectile {
     private int posY;
     private boolean isInBounds;
     private int angleOfMovement;
+    private int damage;
 
     public Projectile(int shotSpeed, int posX, int posY, int shotRad, int angleOfMovement) {
         this.shotSpeed = shotSpeed;
@@ -16,6 +17,8 @@ public class Projectile {
         this.shotRad = shotRad;
         isInBounds = true;
         this.angleOfMovement = angleOfMovement;
+        //Add this to constructor later when we have weapons
+        damage = 10;
         DrawCircle(this.posX, this.posY, shotRad, BLACK);
     }
 
@@ -45,6 +48,23 @@ public class Projectile {
             isInBounds = false;
         }
     }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public int getShotRad() {
+        return shotRad;
+    }
+
+    public int getDamage(){
+        return damage;
+    }
+
     public void update(){
         DrawCircle(posX, posY, shotRad, BLACK);
     }

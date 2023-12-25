@@ -86,5 +86,9 @@ public class Player extends Creature{
         melee();
         DrawCircle(posX, posY, size, RED);
     }
+
+    public static ArrayList<Projectile> getProjList() {
+        return projList;
+    }
 }
 
