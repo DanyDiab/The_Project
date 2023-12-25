@@ -14,6 +14,7 @@ public class Player extends Creature{
     public void move() {
         if (IsKeyDown(KEY_W) && posY > 3 + size) {
             posY -= moveSpeed;
+
         }
         if (IsKeyDown(KEY_S) && posY < GetScreenHeight() - size) {
             posY += moveSpeed;
@@ -32,6 +33,13 @@ public class Player extends Creature{
             projList.add(new Projectile(10,posX,posY,10, projAngle));
         }
         checkProjectilesBounds();
+    }
+
+    public void melee(){
+        if (IsKeyPressed(KEY_SPACE)){
+            Melee sword = new Melee(3,2,5,this.posX,this.posY);
+            sword.attack();
+        }
     }
     public void checkProjectilesBounds(){
         for(int i = 0; i < projList.size(); i++){
@@ -75,6 +83,7 @@ public class Player extends Creature{
     public void update(){
         move();
         createProjecitle();
+        melee();
         DrawCircle(posX, posY, size, RED);
     }
 }
