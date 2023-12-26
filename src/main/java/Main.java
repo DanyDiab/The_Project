@@ -6,7 +6,7 @@ public class Main {
         final int SCREENHEIGHT = 1080;
 //        create new window
         InitWindow(SCREENWIDTH, SCREENHEIGHT, "testing game mechanics");
-//      target fps
+//      target fps TEST
 
         SetTargetFPS(60);
 

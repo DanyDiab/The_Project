@@ -1,5 +1,6 @@
 import java.util.*;
 //UNFINISHED make it so handles all enemies
+//TEST
 public class EnemyHandler {
     private static ArrayList<Enemy> enemyList = new ArrayList<>();
 

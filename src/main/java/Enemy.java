@@ -48,6 +48,7 @@ public class Enemy extends Creature{
             }
         }
     }
+//    TEST
     public void update(){
         if (isAlive){
             gotDamagedRanged();

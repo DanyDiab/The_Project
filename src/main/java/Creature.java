@@ -6,7 +6,7 @@ public class Creature {
     protected int posY;
     protected int moveSpeed;
     protected int size;
-
+//TEST
     public Creature(int hp, int dps, int range, int posX, int posY, int moveSpeed, int size){
         this.hp = hp;
         this.dps = dps;
