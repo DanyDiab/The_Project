@@ -1,7 +1,10 @@
 
 import static com.raylib.Raylib.*;
 import static com.raylib.Jaylib.*;
+
 public class Melee {
+
+//    ethan was here
     private int attackSpeed;
     private int range;
     private int damage;
