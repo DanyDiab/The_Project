@@ -1,5 +1,5 @@
 import java.util.*;
-//UNFINISHED
+//UNFINISHED make it so handles all enemies
 public class EnemyHandler {
     private static ArrayList<Enemy> enemyList = new ArrayList<>();
 
